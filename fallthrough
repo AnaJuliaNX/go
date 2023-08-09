@@ -1,0 +1,23 @@
+package main
+
+import "fmt"
+
+func main() {
+
+	amigos := "Evie"
+	switch amigos {
+	case "Ada":
+		fmt.Println("A Ada sempre vem com o Ben")
+		fallthrough
+	case "Ben":
+		fmt.Println("O Ben sempre vem com a Ada")
+	case "Evie":
+		fmt.Println("A Evie sempre vem com o Leo")
+		fallthrough
+	case "Leo":
+		fmt.Println("O Leo sempre vem com a Evie")
+	}
+
+}
+
+//O fallthrough ignora o próximo case e exibe o próximo print
