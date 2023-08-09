@@ -1,0 +1,17 @@
+package main
+
+import "fmt"
+
+func main() {
+
+	x := 2
+	switch {
+	case x > 5:
+		fmt.Println("O valor é maior que cinco")
+	case x < 5:
+		fmt.Println("O valor é menor que cinco")
+	case x == 5:
+		fmt.Println("O valor é igual a cinco")
+	}
+
+}
