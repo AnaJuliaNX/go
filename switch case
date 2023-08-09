@@ -1,17 +1,17 @@
-package main
+ackage main
 
 import "fmt"
 
 func main() {
-
-	x := 2
+	x := "em teste"
 	switch {
-	case x > 5:
-		fmt.Println("O valor é maior que cinco")
-	case x < 5:
-		fmt.Println("O valor é menor que cinco")
-	case x == 5:
-		fmt.Println("O valor é igual a cinco")
+	case x == "em teste":
+		fmt.Println("Ainda está em fase de teste")
+	case x == "pronto":
+		fmt.Println("Já foi lançado")
+	case x == "fora":
+		fmt.Println("Foi descontinuado")
+	default:
+		fmt.Println("ERRO")
 	}
-
 }
