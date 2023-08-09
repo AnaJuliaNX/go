@@ -4,7 +4,7 @@ import "fmt"
 
 func main() {
 
-	amigos := "Evie"
+	amigos := "teste"
 	switch amigos {
 	case "Ada":
 		fmt.Println("A Ada sempre vem com o Ben")
@@ -16,6 +16,8 @@ func main() {
 		fallthrough
 	case "Leo":
 		fmt.Println("O Leo sempre vem com a Evie")
+	default:
+		fmt.Println("Ninguém veio ainda ou já foram embora")
 	}
 
 }
