@@ -11,3 +11,12 @@ func main() {
 	fmt.Println(slice[1:7])              //segundo ao sétimo slice
 	fmt.Println(slice[2:9])              //terceito ao penultimo slice
 	fmt.Println(slice[8 : len(slice)-1]) //apenas o penultimo slice
+
+}
+
+//tela 
+//[1 2 3]
+//[5 6 7 8 9 10]
+//[2 3 4 5 6 7]
+//[3 4 5 6 7 8 9]
+//[9]
