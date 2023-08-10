@@ -61,3 +61,6 @@ func main() {
 	sabores = append(sabores[:2], sabores[3:]...)
 	fmt.Println(sabores)
 }
+
+// tela
+//[frango, bacon, calabresa, queijo]
