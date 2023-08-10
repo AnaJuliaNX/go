@@ -1,0 +1,17 @@
+package main
+
+import "fmt"
+
+func main() {
+
+	sabores := []string{"frango,", "bacon,", "calabresa,", "queijo"}
+
+	fatia := sabores[1:4]
+
+	fmt.Println(fatia)
+}
+
+
+// tela =
+
+//  [bacon, calabresa, queijo]
