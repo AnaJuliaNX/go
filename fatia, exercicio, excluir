@@ -46,3 +46,18 @@ func main() {
 // bacon, 
 // casalabresa,
 // queijo
+
+
+
+//como apagar uma fatia do slice
+package main
+
+import "fmt"
+
+func main() {
+                                             //vou apagar essa
+	sabores := []string{"frango,", "bacon,", "abacaxi", "calabresa,", "queijo"}
+
+	sabores = append(sabores[:2], sabores[3:]...)
+	fmt.Println(sabores)
+}
