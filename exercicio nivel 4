@@ -20,3 +20,35 @@ func main() {
 //[2 3 4 5 6 7]
 //[3 4 5 6 7 8 9]
 //[9]
+
+
+////////////////////////////////////////////
+
+
+package main
+
+import "fmt"
+
+func main() {
+	mapa := map[string][]string{
+		"marques_paula": {"pescar", "ler"},
+		"senna_ayrton":  {"correr", "ganhar", "bater"},
+	}
+
+	for k, v := range mapa {
+		fmt.Println(k)
+
+		for i, h := range v {
+			fmt.Println("\t", i, " - ", h)
+		}
+	}
+}
+
+//tela 
+//senna_ayrton
+//	 0  -  correr
+//	 1  -  ganhar
+//	 2  -  bater
+//marques_paula
+//	 0  -  pescar
+//	 1  -  ler
