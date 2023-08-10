@@ -1,0 +1,13 @@
+package main
+
+import "fmt"
+
+func main() {
+	//             0  1  2  3  4  5  6  7  8  9  <-estão assim
+	slice := []int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10}
+
+	fmt.Println(slice[:3])               //primeiro ao terceiro item
+	fmt.Println(slice[4:])               //quinto ao ultimo slice
+	fmt.Println(slice[1:7])              //segundo ao sétimo slice
+	fmt.Println(slice[2:9])              //terceito ao penultimo slice
+	fmt.Println(slice[8 : len(slice)-1]) //apenas o penultimo slice
