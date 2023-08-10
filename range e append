@@ -1,0 +1,17 @@
+package main
+
+import "fmt"
+
+func main() {
+
+	slice := []string{"arroz", "feijão", "farofa"}
+
+	//slice[4] = "melancia"  Assim não funcina
+
+	slice = append(slice, "e sobremesa") //assim pode
+
+	for indice, valor := range slice {
+
+		fmt.Println("No indice", indice, "tem:", valor)
+	}
+}
