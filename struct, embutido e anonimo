@@ -37,7 +37,7 @@ func main() {
 //{Trono de vidro, fantasia, false 10}
 
 
-///////////////////////////////////////////////////
+/////////////////////////////////////////////////////
 
 package main
 
@@ -81,3 +81,25 @@ func main() {
 //{{Jogos vorazes, distopia} true}
 //{{Trono de vidro, fantasia} false}
 //{{Jantar secreto suspense} false}
+
+
+///////////////////////////////////////////////////////////
+
+package main
+
+import "fmt"
+
+func main() {
+	livro := struct {
+		nome     string
+		adaptado bool
+	}{
+		nome:     "Jogos vorazes,",
+		adaptado: true}
+
+	fmt.Println("Nome e se foi adaptado")
+	fmt.Println(livro)
+}
+//tela
+//Nome e se foi adaptado
+//{Jogos vorazes, true}
