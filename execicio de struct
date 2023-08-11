@@ -45,13 +45,11 @@ func main() {
 		buscar: true,
 		valor:  33.75,
 	}
-	fmt.Println(marmita1)
+	fmt.Println(marmita1.mistura)  //assim eu mostro só a parte que digitei ali, so caso só mostra a mistura
 	fmt.Println("\n", marmita2)
 	fmt.Println("\n", marmita3)
 }
 //tela 
-{{arroz e feijão, frango e batata, suco de laranja, true} true 20}
-
- {{macarrão, bife a milanesa, coca-cola, true} false 22}
-
- {{arroz e feijoada, torresmo e farofa,  false} true 33.75}
+//frango e batata,
+//{{macarrão, bife a milanesa, coca-cola, true} false 22}
+//{{arroz e feijoada, torresmo e farofa,  false} true 33.75}
