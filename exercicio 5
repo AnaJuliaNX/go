@@ -1,0 +1,39 @@
+package main
+
+import "fmt"
+
+type veiculo struct {
+	portas int
+	cor    string
+}
+
+type caminhonete struct {
+	veiculo
+	tração bool
+}
+
+type sedan struct {
+	veiculo
+	luxo bool
+}
+
+func main() {
+
+	carro1 := caminhonete{
+		veiculo: veiculo{
+			portas: 2,
+			cor:    "vermelho",
+		},
+		tração: true,
+	}
+	carro2 := sedan{
+		veiculo: veiculo{
+			portas: 4,
+			cor:    "azul",
+		},
+		luxo: false,
+	}
+
+	fmt.Println(carro1)
+	fmt.Println(carro2)
+}
