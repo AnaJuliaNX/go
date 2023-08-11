@@ -69,11 +69,15 @@ func main() {
 		},
 		adaptado: false,
 	}
+	livro3 := personagem{livro{"Jantar secreto", "suspense"}, false}  //pode ser feito assim também
+
 	fmt.Println("Nome, genero e se foi adaptado:")
 	fmt.Println(livro1)
 	fmt.Println(livro2)
+	fmt.Println(livro3)
 }
 //tela
 //Nome, genero e se foi adaptado:
 //{{Jogos vorazes, distopia} true}
 //{{Trono de vidro, fantasia} false}
+//{{Jantar secreto suspense} false}
