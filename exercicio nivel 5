@@ -54,3 +54,31 @@ func main() {
 //portas
 //2
 //4
+
+
+//////////////////////////////////////////////////////////////////
+
+
+package main
+
+import "fmt"
+
+func main() {
+	livro := struct {
+		nome        string
+		autor       string
+		páginas     []int
+		notaemotivo map[float64]string
+	}{
+
+		nome:    "Jantar secreto",
+		autor:   "Raphael Montes",
+		páginas: []int{368},
+		notaemotivo: map[float64]string{
+			9.8: "Só não é 10 porque não foi tão uau assim",
+		},
+	}
+	fmt.Println(livro)
+}
+//Tela
+//{Jantar secreto Raphael Montes [368] map[9.8:Só não é 10 porque não foi tão uau assim]}
