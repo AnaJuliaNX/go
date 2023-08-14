@@ -17,7 +17,7 @@ func retorna() func(int) int {
 
 ///////////////////////////////////////////////////////////////////
 
-ckage main
+package main
 
 import "fmt"
 
