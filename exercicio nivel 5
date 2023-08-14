@@ -3,37 +3,54 @@ package main
 import "fmt"
 
 type veiculo struct {
-	portas int
-	cor    string
+	nportas int
+	cor     string
 }
-
 type caminhonete struct {
 	veiculo
 	tração bool
 }
-
 type sedan struct {
 	veiculo
 	luxo bool
 }
 
 func main() {
-
 	carro1 := caminhonete{
 		veiculo: veiculo{
-			portas: 2,
-			cor:    "vermelho",
+			nportas: 2,
+			cor:     "vermelho",
 		},
 		tração: true,
 	}
 	carro2 := sedan{
 		veiculo: veiculo{
-			portas: 4,
-			cor:    "azul",
+			nportas: 4,
+			cor:     "azul escuro",
 		},
 		luxo: false,
 	}
-
+	fmt.Println("Dados da caminhonete:")
+	fmt.Println("portas, cor, tração")
 	fmt.Println(carro1)
+
+	fmt.Println("\nDados do sedan:")
+	fmt.Println(" portas, cor, luxo")
 	fmt.Println(carro2)
+
+	fmt.Println("\nportas")
+	fmt.Println(carro1.nportas) //serve para exibir apenas uma das opções dos structs
+	fmt.Println(carro2.nportas)
 }
+//tela
+//Dados da caminhonete:
+//portas, cor, tração
+//{{2 vermelho} true}
+
+//Dados do sedan:
+// portas, cor, luxo
+//{{4 azul escuro} false}
+
+//portas
+//2
+//4
