@@ -20,3 +20,26 @@ func main() {
 //valor do a: 10
 //endereço do ponteiro: 0xc000012028  //cada hora que atualiza é um endereço diferente
 //valor do ponteiro: 10
+
+
+////////////////////////////////////////////////////////////////////
+
+			EXEMPLO MAIS LIMPO
+package main
+
+import "fmt"
+
+func main() {
+
+	var valor = 10
+	var ponteiro = &valor  //endereço do valor da váriavel
+
+                                   //exibe:
+	fmt.Println(valor)    //valor da variavel
+	fmt.Println(ponteiro)  //endereço da variavel
+	fmt.Println(*ponteiro)  //valor da variavel armazenada nesse endereço
+}
+//tela
+//10
+//0xc000012028
+//10
