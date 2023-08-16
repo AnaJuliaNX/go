@@ -151,3 +151,38 @@ func main() {
 //tela
 //A área do quadrado é:  16
 //A área do circulo é:  9.42477796076938
+
+
+///////////////////////////////////////////////////////////
+		
+			FUNÇÃO ANONIMA
+package main
+
+import "fmt"
+
+func main() {
+
+	func() {
+		fmt.Println("Isso é uma função anonima")
+	}()
+}
+
+//tela
+//Isso é uma função anonima
+
+
+////////////////////////////////////////////////////////
+
+//atribuindo função á uma variável 
+
+package main
+
+import "fmt"
+
+func main() {
+
+	x := func() {
+		fmt.Println("Isso é uma função anonima")
+	}
+	x()
+}
