@@ -20,7 +20,6 @@ func retorintstri() (int, string) {
 
 ////////////////////////////////////////////////////////////
 
-
 package main
 
 import "fmt"
@@ -71,6 +70,7 @@ func main() {
 
 
 ////////////////////////////////////////////////////////
+
 package main
 
 import "fmt"
@@ -186,3 +186,30 @@ func main() {
 	}
 	x()
 }
+
+
+/////////////////////////////////////////////////////////
+
+		   FUNÇÃO QUE RETORNA FUNÇÃO
+package main
+
+import "fmt"
+
+func main() {
+
+	nomealeatorio := testedefunc()
+	nomealeatorio()  //isso serve para chamar a função e executar tudo que foi criado nela
+}
+func testedefunc() func() {  //função que retorna uma função
+	return func() {
+		fmt.Println("Isso é uma função que retorna uma função")
+		fmt.Println(true)
+		fmt.Println(14)        //isso é o qur foi criado nela
+		fmt.Println(14.5)
+	}
+}
+//tela
+//Isso é uma função que retorna uma função
+//true
+//14
+//14.5
