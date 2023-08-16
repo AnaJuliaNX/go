@@ -153,7 +153,7 @@ func main() {
 //A área do circulo é:  9.42477796076938
 
 
-///////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////
 		
 			FUNÇÃO ANONIMA
 package main
@@ -188,7 +188,7 @@ func main() {
 }
 
 
-/////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////
 
 		   FUNÇÃO QUE RETORNA FUNÇÃO
 package main
@@ -213,3 +213,30 @@ func testedefunc() func() {  //função que retorna uma função
 //true
 //14
 //14.5
+
+//////////////////////////////////////////////////////////
+
+	FUNÇÃO COMO ARGUMENTO PARA OUTRA FUNÇÃO
+
+package main
+
+import "fmt"
+
+func main() {
+
+	recebeargumento(oargumento)
+}
+
+func oargumento() {      //passo essa como argumento para a de baixo
+	fmt.Println("Esse é o argumento")
+}
+
+func recebeargumento(x func()) { //tem como parametro receber uma função
+
+	fmt.Println("Esse recebe o argumento")
+
+	x() //chamou a função do parametro
+}
+//tela
+//Esse recebe o argumento
+//Esse é o argumento
