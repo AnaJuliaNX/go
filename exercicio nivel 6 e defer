@@ -20,6 +20,7 @@ func retorintstri() (int, string) {
 
 ////////////////////////////////////////////////////////////
 
+
 package main
 
 import "fmt"
@@ -54,7 +55,7 @@ func função2(x []int) int {
 
 /////////////////////////////////////////////////////////
 
-                     EXEMPLO DE DEFER  
+			EXEMPLO DE DEFER  
 package main
 
 import "fmt"
@@ -102,7 +103,8 @@ func main() {
 //E a nota que dei foi: 9.9
 
 //////////////////////////////////////////////////////////////
-         IMPLEMENTADO UMA INTERFACE
+        
+			IMPLEMENTADO UMA INTERFACE
 package main
 
 import (
