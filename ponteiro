@@ -43,3 +43,36 @@ func main() {
 //10
 //0xc000012028
 //10
+
+
+//////////////////////////////////////////////////////////////////
+
+	EXEMPLO QUE MUDA NA MEMÓRIA E NÃO UMA CÓPIA
+
+package main
+
+import "fmt"
+
+type pessoa struct {
+	nome      string
+	sobrenome string
+	idade     int
+}
+
+func main() {
+
+	aelin := pessoa{"Celaena", "Sardothien", 21}
+	fmt.Println(aelin)
+
+	mudeMe(&aelin)  //essa função alterou po original e não uma cópia
+	fmt.Println(aelin)
+}
+
+func mudeMe(p *pessoa) {
+	(*p).nome = "Aelin"
+	(*p).sobrenome = "Muito dificl de digitar"
+      // p.idade = 22 (pode ser feito dessa forma também)
+}
+//tela
+//{Celaena Sardothien 21}
+//{Aelin Muito dificl de digitar 21}
