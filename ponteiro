@@ -1,0 +1,22 @@
+package main
+
+import "fmt"
+
+func main() {
+
+	var a = 10
+	var ponteiro = &a
+
+	fmt.Println("endereço do a:", &a) //é o endereço do valor armazenado em a
+	fmt.Println("valor do a:", a)
+	
+	fmt.Println("endereço do ponteiro:", ponteiro) //é o endereço do valor do a
+	fmt.Println("valor do ponteiro:", *ponteiro)  
+//ao usar * pega o valor do ponteiro o valor do ponteiro é o valor armazenado no endereço do a
+}
+
+//tela
+//endereço do a: 0xc000012028     //cada hora que atualiza é um endereço diferente
+//valor do a: 10
+//endereço do ponteiro: 0xc000012028  //cada hora que atualiza é um endereço diferente
+//valor do ponteiro: 10
