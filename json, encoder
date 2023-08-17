@@ -1,4 +1,4 @@
-        ALTERANDO DE GO PARA JSON
+        		ALTERANDO DE GO PARA JSON
 
 package main
 
@@ -75,3 +75,37 @@ func main() {
 //tela
 //{Sam Cortland false 21}
 //Cortland
+
+
+
+/////////////////////////////////////////////////////////////////
+
+                 	 ENCODER
+
+package main
+
+import (
+	"encoding/json"
+	"os"
+)
+type pessoa struct {
+	Nome      string
+	Sobrenome string
+	Vivo      bool
+	Idade     int
+}
+
+func main() {
+
+	sam := pessoa{
+		Nome:      "Sam",
+		Sobrenome: "Cortland",
+		Vivo:      false,
+		Idade:     21,
+	}
+	encoder := json.NewEncoder(os.Stdout)
+	encoder.Encode(sam)
+}
+//tela
+//{"Nome":"Sam","Sobrenome":"Cortland","Vivo":false,"Idade":21}
+
