@@ -79,4 +79,30 @@ go env: para ver as variáveis de sistema do go
 
 go help: literalmente é um help, diz todas as funções e coisas que posso usar
 
- 
+go run: pra rodar o dódigo
+go run *.go: para rodar tudo de uma vez quando for preciso 
+
+go build
+  -EXECUTAVEL=
+    -gera o arquivo binário
+    -informa se houve algum erro
+    -Cria um executavél e salva no diretório atual
+  -PACOTE =
+    -gera um arquivo
+    -Informa se houve erros
+    -descarta o executável
+
+go instal 
+  -EXECUTÀVEL
+    -faz o build 
+    -nomeia o arquivocom o nome do diretório atual
+    -salva o arquivo binário em $GOPAHT/bin
+  -PACOTE
+    -faz o build
+    -salva o arquivo binário em $GOPATH/pkg
+    -cria archive files (arquivo.a), os arquivos pré-compilados utilizados pelos imports
+
+flags
+  -"race"
+  OBS: em Go nós podemos usar flags e um exemplo delas é ao race que usamos para ver se existem race conditions 
+(condição de corrida) e isso faz dar bosta na maioria das vezes ou não deixa tão seguro quanto deveria
