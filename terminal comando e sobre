@@ -1,0 +1,60 @@
+                           COMANDOS NO TERMINAL 
+
+obs: no caderno tem mais anotações sobre algumas coisas confere lá
+
+OBS: OS COMANDO ABAIXO SÃO TODO EM LETRA MINUSCULA, QUANDO FOR MAIUSCULA AVISO
+
+RWM: mostra a pasta/diretório que estou 
+
+LS/LL: lista todos os arquivos (no terminal linux usamos mais o LL)
+
+LS-LA: mostra os aquivos ocultos
+
+TOUCH (touch arquivo_novo): cria um arquivo vazio novo 
+
+RM: apaga arquivos 
+RM-RF: apaga pastas (o comando rf entra nos diretório e apaga um por um) 
+
+CD nome_da_pasta: entra nas pastas 
+CD..: volta pra pasta anterior caso eu tenha entrado em uma nova
+CD nome_da_pasta/outra_pasta: assim eu entro em uma pasta e dentro de outra subpasta
+CD ../..: volto de mais de uma pasta de uma vez
+
+ENV (env): diz as variáveis do sistema 
+
+NANO (nano nome_do_arquivo): uma tela gráfica que permite editar os códigos (quase um vs, mas com menos informação), 
+pode ser usado digitaçã padrão que conhecemos e as teclas de atalho em um combo de CTRL (^) e a letra especifica
+
+CAT (cat arquivo_de_texto): mostra um arquico de texto na tela 
+
+LS | GREP (ls | grep nomepasta): ele vai mostrar tudo que ticer esse nome 
+(ls | grep "PalavraChave"): nesse caso o grep vai servir para me mostrar em que lugares esssa palavra chave está no meu sistema 
+ 
+-I ( ls | grep -i NOMEPASTA): o -i vai ignorar se é letra maiuscula ou minuscula
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////
+                     UM POUCO MAIS SOBRE O TERMINAL
+
+  Temos a pasta principal onde foi baixado o arquivo, se for o mesmo o nome é $GOPATH
+Dentro dessa pasta tem várias subpastas.
+bin/ (binário) = aqui ficam todos os meus arquivos executaveis 
+pkg/ (package) = tem algumas coisas pre compiladas, bibliotecas e tal mas não nos interessa tanto
+src/ (source) = é onde irei salvar o meu código e fica mais ou menos assim
+
+     github.com/  (link do meu repositótio no github)
+           <Nome do usuário (github.com)>  (nome de usuário do github)
+               <Nome do projeto ou repositório>  (meus projetos, como o nome já diz)
+               <Nome do projeto ou repositório>
+               <Nome do projeto ou repositório>
+GOROOT = onde os binários da instalação do Go foram instalados 
+  GOROOT: "urs/lib/go"
+
+GOPATH = onde seus arquivos de trabalho, seu workspace, fica localizado
+  GOPATH = (de exemplo) "home/nome/go"
+  para expor GOPATH=$HOME/go (.bashrc) 
+
+
+//////////////////////////////////////////////////////////////////////
+                             IDE
