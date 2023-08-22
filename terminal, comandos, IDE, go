@@ -52,9 +52,31 @@ GOROOT = onde os binários da instalação do Go foram instalados
   GOROOT: "urs/lib/go"
 
 GOPATH = onde seus arquivos de trabalho, seu workspace, fica localizado
-  GOPATH = (de exemplo) "home/nome/go"
+  GOPATH = (de exemplo) 'home/treeunfe/go'
   para expor GOPATH=$HOME/go (.bashrc) 
 
 
 //////////////////////////////////////////////////////////////////////
                              IDE
+
+-Integarted development enviroment (ambiente de desenvolvimento integrado), basicamente é o VSCode
+
+- https://www.jetbrains.com/go/  (testar esse aqui depois porque para estudante parece ser gratuito pelo periodo de um ano,
+é só usar o email da facul)
+
+-https://github.com/tonsky/FiraCode (não sei se será muito util mas é um link de fontes pra usar no editor de código) 
+
+
+
+/////////////////////////////////////////////////////////////////////////////////////
+                        TERMINAL VOLTADO PARA GO
+
+ATENÇÃO: comando feitos no terminal do linux
+
+go versio: para ver a minha versão (até o momento a minha é a 1.21.0)
+
+go env: para ver as variáveis de sistema do go
+
+go help: literalmente é um help, diz todas as funções e coisas que posso usar
+
+ 
