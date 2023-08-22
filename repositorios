@@ -21,8 +21,10 @@
 
   -git status: mostra a situação, o status das coisas (meio óbvio)
   -git add -A: adiciona arquivos para rastrear, adiciona tudo sem critério ou eu posso estar especificando eles um por um
-  -git commit -m: 
+  -git commit -m: commit de cometer algum ato e o m de mensagem, ressaltando que todo commit precisa ter uma descrição escrita
+     ex de commit: "git commit -m  "Todo commit precisa de uma descrição"
 
+   -git remode.. continuar amanha 
 
 
 
