@@ -1,4 +1,4 @@
-        ALGUNS COMANDO PARA O GIT NO TERMINAL
+                              ALGUNS COMANDO PARA O GIT NO TERMINAL
 
 -Depois de criar um novo reporitório pode adicionar ele por linha de comando no terminal
 
@@ -24,7 +24,7 @@
   -git commit -m: commit de cometer algum ato e o m de mensagem, ressaltando que todo commit precisa ter uma descrição escrita
      ex de commit: "git commit -m  "Todo commit precisa de uma descrição"
 
-   -git remode 
+   -git remode: serve para vincular meu reppsitório do github com o meu VSCode "git remote add origin link@domeugit
 
 
 
