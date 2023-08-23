@@ -1,4 +1,4 @@
-                              ALGUNS COMANDO PARA O GIT NO TERMINAL
+                               ALGUNS COMANDO PARA O GIT NO TERMINAL
 
 -Depois de criar um novo reporitório pode adicionar ele por linha de comando no terminal
 
@@ -17,7 +17,8 @@
   6-Criar um arquivo chamado gitignore, ele basicamente é um arquivo de texto oculto de olhos curiosos. Serve para o desenvolvedor
   dizer ao Git quais arquivo e pastas devem ser ignorados  
 
-           OUTROS COMANDO INTERESSANTES 
+
+                                        OUTROS COMANDO INTERESSANTES 
 
   -git status: mostra a situação, o status das coisas (meio óbvio)
   -git add -A: adiciona arquivos para rastrear, adiciona tudo sem critério ou eu posso estar especificando eles um por um
@@ -31,6 +32,22 @@
     OBS: caso pedir senha usar a do github
 
 Agora já ta lá e se não estiver só dar um f5 na página 
+
+
+                                   CLONANDO REPOSITÓRIO/REPO  
+
+1-Copiar o código do repositório em questão (de preferência o SSH porque o HTTPstoda vez vai pedir senha)
+
+2-Git clone: vai clonar o repositório para o VS "git clone link@domeurepo"
+
+-Git remote: serve para saber onde está localizado meu repo "git remote get-url origin"
+
+-Quando precisar de um help para saber quais comando usar digita um "git remote blablabls" ou digita qualquer coisa que abre msg
+de erro e mostra as opções que pode estar usando
+
+
+-Truque sujo para quem como eu não é a rainha do github: se em alguma alteração que estiver fazendo dar zebra e não souber arrumar
+apaga o repo do VS e clona de novo, mas não é muito util caso tenha um repo grande e pouco tempo de sobra
 
 
 
