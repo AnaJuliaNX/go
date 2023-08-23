@@ -5,9 +5,9 @@
   1-Precisa sair de quaisquer pastas que já estivermos e para isso é só usar o comando "cd ..", mas cuidado se já estiver na pasta
   home não sai dela ou da bosta
 
-  2-Criar uma nova pasta com o mesmo nome que o repsitório "mkdir repoexemplo"
+  2-Criar uma nova pasta com o mesmo nome que o repsitório "mkdir repoemquestao"
 
-  3-Entrar nessa pasta nova "cd repoexemplo"
+  3-Entrar nessa pasta nova "cd repoemquestao"
 
   4-Criar uma pasta .git lá dentro usando o "git init"
 
@@ -24,8 +24,13 @@
   -git commit -m: commit de cometer algum ato e o m de mensagem, ressaltando que todo commit precisa ter uma descrição escrita
      ex de commit: "git commit -m  "Todo commit precisa de uma descrição"
 
-   -git remode: serve para vincular meu reppsitório do github com o meu VSCode "git remote add origin link@domeugit
+   -git remode: serve para vincular meu reppsitório do github com o meu VSCode "git remote add origin link@domeugit"
+     OBS: se der um "erro" dizendo que não tem email nem nome de usuário vc coloca um seguindo as instruções, recomendo usar
+     o email vinculado no github e o nome de usuário ser o mesmo também, só por via das duvidas
+  -git push: como se empurrasse esse código para o servidor "git push origin main" (no video ela usa master mas foi att para main)
+    OBS: caso pedir senha usar a do github
 
+Agora já ta lá e se não estiver só dar um f5 na página 
 
 
 
