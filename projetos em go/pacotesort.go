@@ -1,6 +1,5 @@
-
 ///////////////////////////////////////////////////////////
-                  PACOTE SORT COM STRING
+//PACOTE SORT COM STRING
 
 package main
 
@@ -14,16 +13,16 @@ func main() {
 	slicestring := []string{"batata", "agua", "dadinho", "caramelo"}
 
 	fmt.Println(slicestring)
-	sort.Strings(slicestring)  //precisa ser maiusculo e com "s" no final
+	sort.Strings(slicestring) //precisa ser maiusculo e com "s" no final
 	fmt.Println(slicestring)
 }
+
 //tela
 //[batata agua dadinho caramelo]
 //[agua batata caramelo dadinho]
 
-
 ///////////////////////////////////////////////////////////
-                  PACOTE SORT COM INT
+                      //PACOTE SORT COM INT
 package main
 
 import (
@@ -43,9 +42,8 @@ func main() {
 //[2 1 3 4 6 5]
 //[1 2 3 4 5 6]
 
-                  
 ///////////////////////////////////////////////////////////
-                  PACOTE SORT COM FLOAT64
+                     //PACOTE SORT COM FLOAT64
 
 package main
 

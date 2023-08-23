@@ -1,4 +1,4 @@
-                     PRIMEIRO TESTE
+                     //PRIMEIRO TESTE
 
 package main
 
@@ -33,7 +33,7 @@ func testeum(primeiro func()) {
 
 //////////////////////////////////////////////////////////
 
-                     SEGUNDO TESTE
+                     //SEGUNDO TESTE
 
 package main
 
@@ -66,7 +66,7 @@ func novoteste(novo func()) {
 
 //////////////////////////////////////////////////////////
 
-                     TERCEIRO TESTE
+                    // TERCEIRO TESTE
 
 package main
 
@@ -99,7 +99,7 @@ func terceitoteste(terceiro func()) {
 
 //////////////////////////////////////////////////////////
 
-                     ULTIMO TESTE
+                   //  ULTIMO TESTE
 
 package main
 

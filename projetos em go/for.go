@@ -9,21 +9,19 @@ func main() {
 			fmt.Println("O mês é: ", mes, "e o dia é: ", x)
 		}
 	}
- 
+
 }
 
+//Pode ser feito assim também
 
+//package main
 
-//Pode ser feito assim também 
+//import "fmt"
 
-package main
-
-import "fmt"
-
-func main() {
-	x := 0
-	for x < 10 {
-		fmt.Println("Repete isso")
-		x++
-	}
-}
+//func main() {
+//	x := 0
+//	for x < 10 {
+//		fmt.Println("Repete isso")
+//		x++
+//	}
+//}
