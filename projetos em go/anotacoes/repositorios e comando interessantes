@@ -1,0 +1,69 @@
+                         ALGUNS COMANDO PARA O GIT NO TERMINAL
+
+-Depois de criar um novo reporitório pode adicionar ele por linha de comando no terminal
+
+  1-Precisa sair de quaisquer pastas que já estivermos e para isso é só usar o comando "cd ..", mas cuidado se já estiver na pasta
+  home não sai dela ou da bosta
+
+  2-Criar uma nova pasta com o mesmo nome que o repsitório "mkdir repoexemplo"
+
+  3-Entrar nessa pasta nova "cd repoexemplo"
+
+  4-Criar uma pasta .git lá dentro usando o "git init"
+
+  5-Criar um arquivo escrito README.md que vai servir como um guia por escrito do projeto para que as pessoas possam entender 
+  apenas lendo sobre o que se trata, basicamente um manual de instruções "echo "algo para salvar no arquivo" >> README.md"
+
+  6-Criar um arquivo chamado gitignore, ele basicamente é um arquivo de texto oculto de olhos curiosos. Serve para o desenvolvedor
+  dizer ao Git quais arquivo e pastas devem ser ignorados  
+
+
+                                 OUTROS COMANDO INTERESSANTES 
+
+  -GIT STATUS: mostra a situação, o status das coisas (meio óbvio)
+
+  -GIT ADD -A: adiciona arquivos para rastrear, adiciona tudo sem critério ou eu posso estar especificando eles um por um (não é muito recomendavel)
+
+  -GIT ADD .: esse é o melhor para adicionar os meus arquivos, mais recmendavel e melhor para se usar
+
+  -GIT COMMIT -M: commit de cometer algum ato, nesse caso será um comentário que farei antes de subir minhas
+  alterações pro github. "git commit -m "Farse sobre as alterações"
+
+  -GIT REMOTE: uso esse comando para vincular meu VS com o meu repositório no github. "git remote add mequiulink@"
+   OBS: caso de erro pode ser que esteja pedindo o nome de usuário e email, recomendo usar os mesmos logados
+   no github
+
+   -GIT PUSH: como se eu estivesse empurrando meu código pata o servidor "git push origin main".
+   OBS: se pedir senhas coloca a do github
+
+
+                                 USANDO MAIS O GITHUB
+
+  ADENDO: o HTTPs sempre vai pedir para colocar senha, então apenas por conforto usamos o SSH
+
+  GIT CLONE: vai clonar o meu repositório "git clone mequiulink@" 
+
+  GIT REMOTE: pode ser usado também para ver onde está localizado o meu repo "git remote get-url origin"
+
+  DICA: quando precisar de um help com os comandos digita um "git remote qualquercoisa", vai abrir uma mensagem de erro e mostra uma lista de possiveis comando, o seu pode estar lá.
+
+  TRUQUE SUJO: quando da uma porcaria e não sabe como arrumar é só apagar tudo e clonar o repo de novo, mas essa dica não é boa para quem tem repo bem grande.
+
+
+                                    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

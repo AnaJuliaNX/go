@@ -15,19 +15,18 @@ func main() {
 	fmt.Println(listatele)
 	fmt.Println(listatele["Evie"])
 
-// comms ok
+	// comma ok
 	if será, ok := listatele["Ben"]; !ok {
 		fmt.Println("Não listado!")
-		
-              //esse comando exibe o Ben, se não estiver listado mostra o recado, se estiver mostra o número dele
-	} else { 
+
+		//esse comando exibe o Ben, se não estiver listado mostra o recado, se estiver mostra o número dele
+	} else {
 		fmt.Println(será)
 	}
 }
-
 
 //Tela
 
 // map[Cam:111 Evie:222 Leo:333 Mel:444 Nick:555 Raven:777]
 //222
-//Não listado
+//Não listado!
