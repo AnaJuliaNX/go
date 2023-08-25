@@ -2,76 +2,76 @@
 //ele bloqueia até ter um valor que bate com os casos especificados, quando recebe ele executa
 //se tiver mais de um caso válido ele escolhe um aleatório para executar, não tenho controle sobre isso
 
-//package main
+package main
 
-//import "fmt"
+import "fmt"
 
-//func main() {
+func main() {
 
-//	a := make(chan int)
+	a := make(chan int)
 //vários canais
-//	b := make(chan int)
-//	x := 500
+	b := make(chan int)
+	x := 500
 
-//	go func(x int) {
-//		for i := 0; i < x; i++ {
-//			a <- i
-//		}
-//	}(x / 2)
+	go func(x int) {
+		for i := 0; i < x; i++ {
+			a <- i
+		}
+	}(x / 2)
 
-//	go func(x int) {
-//		for i := 0; i < x; i++ {
-//			b <- i
-//		}
-//	}(x / 2)
+	go func(x int) {
+		for i := 0; i < x; i++ {
+			b <- i
+		}
+	}(x / 2)
 
-//	for i := 0; i < x; i++ {
-//		select {  //eu posso usar esse select para receber informações de vários canais em um mesmo lugar
-//		case v := <-a:
-//			fmt.Println("Canal A: ", v)
+	for i := 0; i < x; i++ {
+		select {  //eu posso usar esse select para receber informações de vários canais em um mesmo lugar
+		case v := <-a:
+			fmt.Println("Canal A: ", v)
 //aqui no caso é o meu "switch com cases"
-//		case v := <-b:
-//			fmt.Println("Canal B: ", v)
-//		}
-//	}
-//}
+		case v := <-b:
+			fmt.Println("Canal B: ", v)
+		}
+	}
+}
 
 ////////////////////////////////////////////////////////////////////////////////
 //EXEMPLO DOIS DE SELECT
 
-//package main
+package main
 
-//import "fmt"
+import "fmt"
 
-//func main() {
+func main() {
 
-//	canal := make(chan int)
-//	quit := make(chan int)
-//	go recebeQuit(canal, quit)
-//	enviaPCanal(canal, quit)
+	canal := make(chan int)
+	quit := make(chan int)
+	go recebeQuit(canal, quit)
+	enviaPCanal(canal, quit)
 
-//}
+}
 
-//func recebeQuit(canal chan int, quit chan int) {
-//	for i := 0; i < 50; i++ {
-//		fmt.Println("Recebido: ", <-canal)
-//	}
-//	quit <- 0
-//}
+func recebeQuit(canal chan int, quit chan int) {
+	for i := 0; i < 50; i++ {
+		fmt.Println("Recebido: ", <-canal)
+	}
+	quit <- 0
+}
 
-//func enviaPCanal(canal chan int, quit chan int) {
-//	algumacoisa := 1
-//	for {
-//		select {
-//		case canal <- algumacoisa:  //manda coisa para um canal
-//			algumacoisa++
+func enviaPCanal(canal chan int, quit chan int) {
+	algumacoisa := 1
+	for {
+		select {
+		case canal <- algumacoisa:  //manda coisa para um canal
+			algumacoisa++
 
-//		case <-quit: //recebe coisa de um canal
-//			return
-//		}
+		case <-quit: //recebe coisa de um canal
+			return
+		}
 
-//	}
-//}
+	}
+}
 
 ////////////////////////////////////////////////////////////////////////////////
 //EXEMPLO TRES DE SELECT
@@ -91,10 +91,10 @@ func main() {
 	receive(par, impar, quit)
 }
 
-func mandaNumero(par, impar, chan int, quit, chan bool) {
-	total := 10
+func mandaNumero(par, impar chan int, quit chan bool) {
+	total := 100
 	for i := 0; i < total; i++ {
-		if i % 2 {
+		if i%2 == 0 {
 			par <- i
 		} else {
 			impar <- i
@@ -105,7 +105,7 @@ func mandaNumero(par, impar, chan int, quit, chan bool) {
 	quit <- true
 }
 
-func receive(par, impar, chan int, quit, chan bool) {
+func receive(par, impar chan int, quit chan bool) {
 	for {
 		select {
 		case v := <-par:
@@ -115,7 +115,7 @@ func receive(par, impar, chan int, quit, chan bool) {
 			fmt.Println("O numero: ", v, "é impar")
 
 		case <-quit:
-
+			return
 		}
 	}
 
