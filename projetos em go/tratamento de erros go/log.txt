@@ -1,0 +1,1 @@
+2023/08/29 17:00:19 Aconteceu um erro open no-file.txt: no such file or directory
