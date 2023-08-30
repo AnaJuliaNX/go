@@ -6,24 +6,24 @@
 //Se tiver mais de um canal e quiser usar o buffer preciso incluir todos os canais no buffer a menos que
 //estejam dentro de uma func ai coloco só o que precisa
 
-//package main
+package main
 
-//import "fmt"
+import "fmt"
 
-//func main() {
+func main() {
 
-//	canal := make(chan int, 1)
+	canal := make(chan int, 1)
 
-//	go func() {
-//		canal <- 42
-//		canal <- 43
+	go func() {
+		canal <- 42
+		canal <- 43
 
-//	}()
+	}()
 
-//	fmt.Println(<-canal)
-//	fmt.Println(<-canal)
+	fmt.Println(<-canal)
+	fmt.Println(<-canal)
 
-//}
+}
 
 ///////////////////////////////////////////////////////////////////////////
 //CANAIS BIDIRECIONAIS
@@ -32,27 +32,27 @@
 //chan<-: coloca as informações no canal.
 //<-chan: tira as informações do canal.
 
-//package main
+package main
 
-//import "fmt"
+import "fmt"
 
-//func main() {
+func main() {
 
-//	canal := make(chan int) //aqui ele ainda é um canal bidirecional
+	canal := make(chan int) //aqui ele ainda é um canal bidirecional
 
-//	go send(canal) //pelo menos um precisa ser uma goroutine
+	go send(canal) //pelo menos um precisa ser uma goroutine
 
-//	receive(canal)
-//}
+	receive(canal)
+}
 
-//func send(s chan<- int) {
-//	s <- 14
+func send(s chan<- int) {
+	s <- 14
 //esse canal serve para colocar valores dentro do canal e coloquei o 14 no caso
-//}
-//func receive(r <-chan int) {
-//	fmt.Println("O valor recebido do canal foi: ", <-r)
+}
+func receive(r <-chan int) {
+	fmt.Println("O valor recebido do canal foi: ", <-r)
 //esse canal serve para receber/tirar informações
-//}
+}
 
 //isso tudo quer dizer que: no canal send eu coloquei o número 14 e no canal receive eu tirei a informação para
 //exibir na tela, só reparar nas setas.

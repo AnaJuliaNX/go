@@ -1,48 +1,48 @@
 //BACKGROUND
 
-//package main
+package main
 
-//import (
-//	"context"
-//	"fmt"
-//)
+import (
+	"context"
+	"fmt"
+)
 
-//func main() {
+func main() {
 
-//	ctx := context.Background()
+	ctx := context.Background()
 
-//	fmt.Println("context:\t", ctx)//conteudo do meu context
-//	fmt.Println("context err:\t", ctx.Err()) //vai mostrar se tem algum erro, normalmente isso seria depois do
+	fmt.Println("context:\t", ctx)//conteudo do meu context
+	fmt.Println("context err:\t", ctx.Err()) //vai mostrar se tem algum erro, normalmente isso seria depois do
 //cancel nesse caso como não estáe ele não exibe nenhum erro
-//	fmt.Printf("context type:\t%T\n", ctx)//nesse o tipo dele é "emptyCtx"
-//	fmt.Println("------------")
-//}
+	fmt.Printf("context type:\t%T\n", ctx)//nesse o tipo dele é "emptyCtx"
+	fmt.Println("------------")
+}
 
 //////////////////////////////////////////////////////////////////
 //WITHCANCEL
 
-//package main
+package main
 
-//import (
-//	"context"
-//	"fmt"
-//)
+import (
+	"context"
+	"fmt"
+)
 
-//func main() {
-//	ctx := context.Background()
+func main() {
+	ctx := context.Background()
 
-//	fmt.Println("context:\t", ctx)
-//	fmt.Println("context err\t", ctx.Err())   //isso aqui é a mesma coisa de antes
-//	fmt.Printf("context type:\t%T\n", ctx)
-//	fmt.Println("-----------")
+	fmt.Println("context:\t", ctx)
+	fmt.Println("context err\t", ctx.Err())   //isso aqui é a mesma coisa de antes
+	fmt.Printf("context type:\t%T\n", ctx)
+	fmt.Println("-----------")
 
-//	ctx, _ = context.WithCancel(ctx)
+	ctx, _ = context.WithCancel(ctx)
 
-//	fmt.Println("context\t", ctx) //conteudo do meu context
-//	fmt.Println("context err:\t", ctx.Err()) //exibiria o erro se eu já tivesse criado o cancel
-//	fmt.Printf("context type:\t%T\n", ctx) //tipo dele, nesse o tipo é "cancelCtx"
-//	fmt.Println("-----------")
-//}
+	fmt.Println("context\t", ctx) //conteudo do meu context
+	fmt.Println("context err:\t", ctx.Err()) //exibiria o erro se eu já tivesse criado o cancel
+	fmt.Printf("context type:\t%T\n", ctx) //tipo dele, nesse o tipo é "cancelCtx"
+	fmt.Println("-----------")
+}
 
 //////////////////////////////////////////////////////////////////
 //FUNÇÃO CANCEL
@@ -76,7 +76,6 @@ func main() {
 
 	fmt.Println("context:\t", ctx)
 	fmt.Println("context err:\t", ctx.Err()) //aqui vou ter um "erro", no caso vai exibir que foi cancelado
-	fmt.Printf("context type:\t%T\n", ctx)
-	fmt.Println("cancel:\t\t", cancel)
+	fmt.Printf("context type:\t%T\n", ctx)   //aqui é o tipo dele, no caso "cancelCtx"
 	fmt.Println("--------")
 }
