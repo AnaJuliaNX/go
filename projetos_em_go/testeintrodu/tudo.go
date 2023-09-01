@@ -63,10 +63,14 @@ import "fmt"
 func main() {
 
 	a := Soma(2, 3, 5)
-	b := Multiplica(10, 10)
+	b := Nome("Aelin")
+	c := Simplao("Teste simples")
+	d := Multiplica(10, 10)
 
 	fmt.Println(a)
 	fmt.Println(b)
+	fmt.Println(c)
+	fmt.Println(d)
 }
 
 func Soma(i ...int) int {
@@ -75,6 +79,22 @@ func Soma(i ...int) int {
 		total = total + v
 	}
 	return total
+}
+
+func Nome(i ...string) string {
+	nome := "Aelin"
+	for _, v := range i {
+		nome = v
+	}
+	return nome
+}
+
+func Simplao(i ...string) string {
+	simples := "Teste apenas"
+	for _, v := range i {
+		simples = v
+	}
+	return simples
 }
 
 func Multiplica(i ...int) int {

@@ -68,7 +68,7 @@ func TestNome(t *testing.T) {
 
 //Nesse tipo de teste fazemos muito mais rápido e sem precisar escrever tanto assim
 
-package main
+/*package main
 
 import "testing"
 
@@ -95,12 +95,50 @@ func TestSomaTabela(t *testing.T) {
 	}
 }
 
-func TestSoma(t *testing.T) {
-	teste := Soma(2, 3, 5)
-	resultado := 10
-	if teste != resultado {
-		t.Error("Expected:", resultado, "Got:", teste)
+// PODE SER FEITO COM UM SLICE OF STRING E AI FICA DESSA FORMA:
+type test2 struct {
+	data   []string //tanto os dados quanto a resposta precisam ser um slice of string
+	answer []string
+}
+
+func TestVariosTabela(t *testing.T) {
+	testes := []test2{
+		//nesse caso a string precisa ter a mesma quantidade da resposta/answer pra dar certo,
+		//se tiver menor ou mais strings da erro
+		test2{data: []string{"deu certo", "será que dá"}, answer: []string{"deu certo", "será que dá"}},
+		test2{[]string{"repete isso", "repete de novo"}, []string{"repete isso", "repete de novo"}},
+		test2{[]string{"mais uma vez", "teste"}, []string{"mais uma vez", "teste"}},
 	}
+	for _, v := range testes {
+		exemplo := Nome(v.data...)
+		//o v.answer precisa ser desse jeito pra dar certo com slice of string
+		if exemplo != Nome(v.answer...) {
+			t.Error("Expected:", v.answer, "Got", exemplo)
+		}
+	}
+}
+
+type test3 struct {
+	data   []string
+	//como esse teste é mais simples não existe necessidade de fazer um slice of string pro answer
+	answer string
+}
+
+//ESSA É MAIS SIMPLES, SEM AQUELE MONTE DE STRING
+func TestSimpTabela(t *testing.T) {
+	teste := []test3{
+		test3{data: []string{"Mais simples"}, answer: "Mais simples"},
+		test3{[]string{"Só uma string"}, "Só uma string"},
+		test3{[]string{"Sem segredo"}, "Sem segredo"},
+	}
+	for _, v := range teste {
+		exemplo := Simplao(v.data...)
+		//sem o monte de string posso usar apenas assim o v.answer
+		if exemplo != v.answer {
+			t.Error("Expected:", v.answer, "Got", exemplo)
+		}
+	}
+
 }
 
 func TestMulti(t *testing.T) {
@@ -108,5 +146,146 @@ func TestMulti(t *testing.T) {
 	resultado := 100
 	if teste != resultado {
 		t.Error("Expected:", resultado, "Got:", teste)
+	}
+}*/
+
+////////////////////////////////////////////////////////////////////////
+//	TESTE SEM COISAS ESCRITAS, APENAS PARA VISUALIZAR
+
+/*package main
+
+import (
+	"testing"
+)
+
+type test struct {
+	data   []int
+	answer int
+}
+
+func TestSomaTabela(t *testing.T) {
+	tests := []test{
+		test{data: []int{1, 2, 3}, answer: 6},
+		test{[]int{10, 11, 12}, 33},
+		test{[]int{-5, 0, 5, 10}, 10},
+	}
+	for _, v := range tests {
+		exemplo := Soma(v.data...)
+		if exemplo != v.answer {
+			t.Error("Expected:", v.answer, "Got:", exemplo)
+		}
+	}
+}
+
+type test2 struct {
+	data   []string
+	answer []string
+}
+
+func TestVariosTabela(t *testing.T) {
+	testes := []test2{
+		test2{data: []string{"Será que da?", "Deu certo"}, answer: []string{"Será que da?", "Deu certo"}},
+		test2{[]string{"Funciona bem", "assim também"}, []string{"Funciona bem", "assim também"}},
+		test2{[]string{"Mais um teste", "cansei"}, []string{"Mais um teste", "cansei"}},
+	}
+	for _, v := range testes {
+		exemplo := Nome(v.data...)
+		if exemplo != Nome(v.answer...) {
+			t.Error("Expected:", v.answer, "Got:", exemplo)
+		}
+	}
+}
+
+type test3 struct {
+	data   []string
+	answer string
+}
+
+func TestSimpTabela(t *testing.T) {
+	teste := []test3{
+		test3{data: []string{"Mais simples"}, answer: "Mais simples"},
+		test3{[]string{"Só uma string"}, "Só uma string"},
+		test3{[]string{"Sem segredo"}, "Sem segredo"},
+	}
+	for _, v := range teste {
+		exemplo := Simplao(v.data...)
+		if exemplo != v.answer {
+			t.Error("Expected:", v.answer, "Got", exemplo)
+		}
+	}
+}
+
+func TestMulti(t *testing.T) {
+	teste := Multiplica(10, 10)
+	resultado := 100
+	if teste != resultado {
+		t.Error("Exepecte:", resultado, "Got:", teste)
+	}
+}
+*/
+
+////////////////////////////////////////////////////////////////////////
+//TESTES COMO EXEMPLOS
+
+package main
+
+import (
+	"fmt"
+	"testing"
+)
+
+// Sempre que for usar esse coloca "Example" antes
+func ExampleSoma() {
+	fmt.Println(Soma(3, 2, 1))
+	//esse output vai funcionar como minha resposta/answer
+	// Output: 6
+}
+
+func ExampleNome() {
+	fmt.Println(Nome("Evangeline"))
+	//Output: Evangeline
+}
+
+func ExampleMultiplica() {
+	fmt.Println(Multiplica(5, 5))
+	fmt.Println(Multiplica(10, 10))
+	fmt.Println(Multiplica(100, 100))
+	//Output: 25
+	//100
+	//10000
+}
+
+////////////////////////////////////////////////////////////////////////
+//BENCHMARKS
+
+//comando no terminal: go test -bench Nomedafunc
+
+func BenchmarkMultiplica(b *testing.B) {
+	for i := 0; i < b.N; i++ {
+		Multiplica(2, 2)
+	}
+}
+
+func BenchmarkNome(b *testing.B) {
+	for i := 0; i < b.N; i++ {
+		Nome("Vendo se dá")
+	}
+}
+
+type test struct {
+	data   []int
+	answer int
+}
+
+func BenchmarkSoma(b *testing.B) {
+	tests := []test{
+		test{data: []int{1, 2, 3}, answer: 6},
+		test{[]int{10, 11, 12}, 33},
+		test{[]int{-5, 0, 5, 10}, 10},
+	}
+	for i := 0; i < b.N; i++ {
+		for _, v := range tests {
+			Soma(v.data...)
+		}
 	}
 }
