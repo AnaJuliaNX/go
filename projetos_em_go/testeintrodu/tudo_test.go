@@ -1,4 +1,4 @@
-/*package main
+package main
 
 import (
 	"testing"
@@ -54,21 +54,21 @@ func TestNome(t *testing.T) {
 }
 
 //O TESTE PODE SER FEITO DESSA FORMA TAMBÉM
-//func TestNome(t *testing.T) {
-//	teste := "Testando se assim dá tbm"
-//	resultado := "Testando se assim dá tbm"
-//	if teste != resultado {
-//		t.Error("Expected", resultado, "Got:", teste)
-//	}
-//}
-*/
+func TestNome(t *testing.T) {
+	teste := "Testando se assim dá tbm"
+	resultado := "Testando se assim dá tbm"
+	if teste != resultado {
+	t.Error("Expected", resultado, "Got:", teste)
+  }
+}
+
 
 ////////////////////////////////////////////////////////////////////////
 //TESTE EM TABELA
 
 //Nesse tipo de teste fazemos muito mais rápido e sem precisar escrever tanto assim
 
-/*package main
+package main
 
 import "testing"
 
@@ -147,12 +147,12 @@ func TestMulti(t *testing.T) {
 	if teste != resultado {
 		t.Error("Expected:", resultado, "Got:", teste)
 	}
-}*/
+}
 
 ////////////////////////////////////////////////////////////////////////
 //	TESTE SEM COISAS ESCRITAS, APENAS PARA VISUALIZAR
 
-/*package main
+package main
 
 import (
 	"testing"
@@ -222,7 +222,7 @@ func TestMulti(t *testing.T) {
 		t.Error("Exepecte:", resultado, "Got:", teste)
 	}
 }
-*/
+
 
 ////////////////////////////////////////////////////////////////////////
 //TESTES COMO EXEMPLOS

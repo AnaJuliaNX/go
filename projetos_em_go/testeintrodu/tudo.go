@@ -1,4 +1,4 @@
-/*package main
+package main
 
 import (
 	"fmt"
@@ -51,7 +51,7 @@ func Nome(i ...string) string {
 	}
 	return fala
 }
-*/
+
 
 ////////////////////////////////////////////////////////////////////////
 //TESTE EM TABELA
