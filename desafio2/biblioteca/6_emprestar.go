@@ -57,7 +57,7 @@ func Emprestando(w http.ResponseWriter, r *http.Request) {
 	}
 
 	//Crio uma variavel para que possa fazer a conversão de json para struct
-	var emprestar dados.DataEmprestimo
+	var emprestar dados.EmprestimoDevolucao
 	erro = json.Unmarshal(corpoRequisicao, &emprestar)
 	if erro != nil {
 		TratandoErros(w, "Erro ao converter json para struct", 422)

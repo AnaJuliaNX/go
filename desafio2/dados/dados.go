@@ -14,7 +14,7 @@ type Livro struct {
 	Estoque int    `json:"estoque"`
 }
 
-type DataEmprestimo struct {
+type EmprestimoDevolucao struct {
 	Nome_Usuario    string    `json:"nome_usuario"`
 	Titulo_livro    string    `json:"titulo_livro"`
 	Quantidade      int       `json:"quantidade"`

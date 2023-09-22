@@ -38,7 +38,7 @@ func main() {
 	//Rota para emprestar um livro, especificando o ID do usuário e do livro
 	router.HandleFunc("/usuario/{usuario_id}/emprestar/livro/{livro_id}", biblioteca.Emprestando).Methods(http.MethodPut)
 	//Rota para devolver um livro, especificando o ID do usuário e do livro
-	router.HandleFunc("/livros/{id}/devolver", biblioteca.DevolverLivro).Methods(http.MethodPut)
+	router.HandleFunc("/usuario/{usuario_id}/devolver/livro/{livro_id}", biblioteca.Devolvendo).Methods(http.MethodPut)
 
 	//Apenas um aviso de que o servidor está funcionando certo
 	fmt.Println("Executando na porta 2000")
